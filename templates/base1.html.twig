@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>ASN</title>
+
+</head>
+<style>
+  .links{
+      text-decoration: none;
+  }
+  .sombra {
+  margin: 25px auto;
+  border: 1px solid #ccc;
+  box-shadow: 7px 7px 15px black; 
+  }
+
+  .name{
+    font-family: 'Oswald', sans-serif;
+  }
+  .feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+}
+</style>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top p-3 bg-dark">
+          <div class="container-fluid">
+            {% block logo %}{% endblock %}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  {% block home %}{% endblock %}
+                </li> 
+                <li class="nav-item dropdown">
+                  {% block motocicletas %}{% endblock %}
+                </li>
+                <li class="nav-item">
+                  {% block sugerencias %}{% endblock %}
+                </li>
+                <li class="nav-item">
+                  {% block blog %}{% endblock %}
+                  </li>
+              </ul>
+              <div class="text-end">
+                {% block buttons %}{% endblock %}
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <main>
+
+        {% block section %}{% endblock %}
+
+
+        <!-- FOOTER -->
+      <footer class="py-5 bg-dark mt-5">
+        <div class="container"><p class="m-0 text-center text-white">© 2022 ASN - Adventure Sport Nacked.</p></div>
+      </footer>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+
+</html>

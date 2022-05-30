@@ -1,0 +1,317 @@
+{% extends "base1.html.twig" %}
+
+
+{% block logo %}
+  <a class="navbar-brand" href="/uPage/"><img src="../images/logo.png" class="bd-placeholder-img rounded-circle" width="50" height="50" alt="Mecánico"></a>
+{% endblock %}
+
+{% block home %}
+  <a class="nav-link px-2 text-secondary" aria-current="page" href="/uPage/">Home</a>
+{% endblock %}
+{% block motocicletas %}
+<a class="nav-link dropdown-toggle px-2 text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Motocicletas</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/uPage/#supersport/">Deportivas</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#nacked"/>Nacked</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#adventure/">Adventure</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#sportTouring/">Sport Touring</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#motocross/">Motocross</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#scrambler/">Scrambler</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#cruiser/">Cruiser</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#chooper/">Chooper</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#scooter/">Scooter</a></li>
+                  </ul>
+{% endblock %}
+{% block sugerencias %}
+  <a class="nav-link px-2 text-white" href="/uSugerencias/">Sugerencias</a>
+{% endblock %}
+{% block blog %}   
+  <a class="nav-link px-2 text-white" href="/uBlog/">Blog</a>
+{% endblock %}
+{% block buttons %}
+  <a class="links" href='/profile/'><button type="button" class="btn btn-outline-light me-2">{{resultado.getUser()}}</button></a>
+  <a class="links" href='/exit/'><button type="button" class="btn btn-warning">Cerrar Sesión</button></a>
+{% endblock %}
+{% block section %}
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active"
+      aria-current="true"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img src="../images/R1_1.0.jpg" class="d-block w-100 img-fluid" alt="Yamaha_R1">
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Yamaha R1</h1>
+          <p>Yamaha acaba de presentar su máquina definitiva. La nueva <strong>R1</strong> es más potente, más rápida,
+            más tecnológica, más manejable y más efectiva que nunca..</p>
+          <p><a class="btn btn-lg btn-primary" href="#supersport">Supersport</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item active">
+      <img src="../images/TENERE700_1.0.jpg" class="d-block w-100 img-fluid" alt="Yamaha_R1">
+
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Ténéré 700</h1>
+          <p>Esta es una motocicleta con la que viajar adonde quieras y que te permite vivir sin límites,
+            experimentando una nueva sensación de total libertad.</p>
+          <p><a class="btn btn-lg btn-primary" href="#adventure">Adventure</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../images/SCRAMBLER_1.0.jpg" class="d-block w-100 img-fluid" alt="Yamaha_R1">
+
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>1100 Tribute Pro</h1>
+          <p>Un nuevo capítulo de la historia. Un nuevo modo de celebrar un patrimonio intemporal con un estilo
+            inigualable.
+            Nueva Scrambler 1100 Tribute PRO.</p>
+          <p><a class="btn btn-lg btn-primary" href="#scrambler">Scrambler</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+
+<!-- Marketing messaging and featurettes
+          ================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing" style="margin-top: 5%;">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-lg-4  col-sm-12 text-center">
+      <img src="../images/llaveInglesa.png" class="bd-placeholder-img rounded-circle" width="140" height="140"
+        alt="Mecánico">
+      <h2>El mantenimiento es clave</h2>
+      <p>El mantenimiento de tu moto es muy importante, por eso debe de ser siempre el correcto.<p>
+     <!--  <p><a class="btn btn-secondary" href="#">Ver detalles »</a></p>-->
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4 col-sm-12 text-center">
+      <img src="../images/casco.png" class="bd-placeholder-img rounded-circle" width="140" height="140"
+        alt="Casco Moto">
+      <h2>Invierte en material</h2>
+      <p>Cuando se una moto tienes que tener en cuenta que no es como cuando compras un coche, hay que invertir dinero en buenos materiales que ayuden a nuestra seguridad.</p>
+     <p><a class="btn btn-secondary" href="/uSugerencias/" id="supersport">Ver detalles »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4  col-sm-12 text-center">
+      <img src="../images/moto.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Casco Moto">
+      <h2>A tu ritmo</h2>
+      <p>No te sientas obligado a seguir a otros motoristas, quizás mucho más experimentados (o inconscientes) que
+        tú.Tú, a tu ritmo.</p>
+      <!-- <p><a class="btn btn-secondary" id="supersport" href="#">Ver detalles »</a></p>-->
+    </div><!-- /.col-lg-4 -->
+  </div>
+
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Deportivas <span class="text-muted"></h2>
+      <p class="lead">¿Qué se entiende como moto deportiva? Pues ni más ni menos que aquella moto que es estudiada y
+        pensada para ofrecer las mayores prestaciones puras posibles. Ser la más rápida frente cronómetro, disponer de
+        la mejor y más rápida aceleración, el mejor y más veloz paso por curva, la mayor estabilidad, la mejor frenada y
+        la mayor agilidad. Para ello se potencian especialmente muchos detalles muy fáciles de detectar a simple vista y
+        se prescinde de todo aquello que no ayuda a bajar décimas.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="../images/PANIGALE_1.0.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Yamaha_R1" id="nacked">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Nacked</h2>
+      <p class="lead">Las motos naked se denominan así por llevar el motor al aire y no cubierto con un carenado. Esta
+        es su principal característica, como en el caso de los modelos deportivos.Generalmente las motos naked se
+        construyen con un tanque más grande y más largo. Además, este tipo de motocicletas también tienen controles de
+        pie más traseros para evitar que las estriberas raspen el pavimiento, especialmente durante las curvas.
+        Generalmente tienen sus controles de pie colocados más en el centro con un manillar de elevación más alto. Por
+        tanto, la ubicación del manillar como de los controles de pie afecta también a la postura del motorista, así
+        como a la silueta general de la moto.
+        Tengamos en cuenta que en las motos naked tanto la posición del manillar como de los controles de pie de ajuste
+        trasero están diseñados para circular a alta velocidad.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="../images/nacked.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Yamaha_R1"
+        id="adventure">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Adventure</h2>
+      <p class="lead">La habilidad de las motos Adventure de ser funcionales tanto en carretera como fuera de la misma
+        hace que este tipo de vehículos sean favoritos entre muchos amantes del motociclismo. Este tipo de motocicletas
+        son máquinas diseñadas para todo tipo de terrenos, tanto en dentro del camino como en Offroad y este tipo de uso
+        las hace ideales para aquellos que quieren aprovechar su moto al máximo, ya sea un fin de semana de viaje sobre
+        el asfalto o si lo que buscas es salir a descubrir nuevos caminos lejos del pavimento.
+
+
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img src="../images/adventure.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Yamaha_R1"
+        id="sportTouring">
+
+    </div>
+  </div>
+
+
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Sport Touring</h2>
+      <p class="lead">Las motos Sport Touring (Deportiva y Turismo en español) son un derivado directo del touring y
+        mezclan los siguientes aspectos: comodidad, seguridad, capacidad para larga distancia y velocidad.
+        De una manera más simple, se podría decir que son una mezcla entre una moto sport o de velocidad y una de
+        turismo, porque ésta incluye lo mejor de ambas: la velocidad y la estabilidad de una moto sport o de velocidad,
+        junto a la comodidad y a la seguridad de una moto de touring.
+        Son motos diseñadas para viajes largos a una velocidad normal o elevada, en las cuales se puede viajar
+        cómodamente, pudiendo realizar un tipo de conducción similar a la sport.
+      </p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="../images/sportTouring.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Yamaha_R1"
+        id="motocross">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Motocross</h2>
+      <p class="lead">Una motocicleta de cross es una motocicleta de competición diseñada para grandes saltos y terrenos
+        áridos difíciles de recorrer. Estas motocicletas tienen las suspensiones con más recorrido que otro tipo de
+        motocicletas para tener mayor suavidad en los saltos y mejor estabilidad en los terrenos
+        difíciles(tierra,barro,etc).
+        Este tipo de motocicleta debido a su propósito competitivo, poseen un motor muy potente de 2T o 4T tiempos, las
+        primeras motocicletas de cross eran 2T en la mayoría de sus cilindradas enfriado por aire, con el tiempo y las
+        mejoras de diseño empezaron a surgir a finales de los ochenta y principios de los noventa los motores enfriados
+        por líquido.
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img src="../images/motocross.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Yamaha_R1"
+        id="scrambler">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Scrambler</h2>
+      <p class="lead">Nacieron en Reino Unido de la mano de motos cafe racer. En su origen, eran motos preparadas por
+        los jóvenes, quienes realizaban carreras ilegales de un punto a otro de la ciudad en el menor tiempo posible y
+        por cualquier tipo de terreno.
+        las motos scramble responden a toda aquella moto de carretera adaptada a un uso offroad. Por tanto, entre sus
+        características básicas destacan la ligereza, robustez y fiabilidad pero, además, cuentan con una serie de
+        peculiaridades que las hacen muy distintas del resto: Ruedas de tacos robustas.
+      </p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="../images/scrambler_2.0.jpg" class="d-block w-100 img-fluid" width="500" height="500"
+        alt="Yamaha XSR700" id="cruiser">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Cruiser</h2>
+      <p class="lead">Las motos Cruiser tienen un estilo derivado de las ya legendarias y épicas Harley Davidson e
+        Indian. Estas motocicletas definieron un estilo propio y característico propulsado por un motor de dos cilindros
+        en V. Esta disposición y su ángulo son los que le brindan ese sonido tan especial que ha hecho amantes de las
+        motocicletas. Este sonido que hasta Harley Davidson lo ha patentado.
+        Los motores de Cruiser están configurados para tener un bajo caballaje y un gran torque, haciendo que su motor
+        tenga más fuerza a menor cantidad de revoluciones.
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img src="../images/cruiser.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Yamaha_R1"
+        id="chooper">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading">Chooper</h2>
+      <p class="lead">Una Chopper es un tipo de motocicleta modificada (Chopped), para tener un ángulo de lanzamiento
+        mayor, con horquilla más larga, lo que le da una batalla y avance más grandes que el resto de los tipos de
+        motocicletas. Normalmente tiene un manillar más largo a lo alto, lo que le da una posición a las manos más alta
+        que los hombros del piloto.
+        Puede estar basada en una motocicleta de producción o ser creada desde cero.Chopper, se las llama así por el
+        verbo inglés «to chop» (cortar), ya que se corta o desmonta de la moto todo lo que resulta.
+      </p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="../images/chopper.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Yamaha XSR700"
+        id="scooter">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Scooter</h2>
+      <p class="lead"> es un tipo de vehículo motorizado de dos ruedas, con un cuadro abierto en la que el conductor se
+        sienta (sin montar a horcajadas sobre parte alguna del motor). La mayoría de las motonetas modernas tienen
+        ruedas más pequeñas que las motocicletas, de entre 12 y 15 pulgadas (30,5−38 cm) de diámetro, y fueron creadas
+        idealmente para uso urbano.
+        En cuanto a mecánica se refiere, suelen tener una transmisión sencilla y cómoda a través del manillar y en la
+        actualidad la mayoría de modelos incorporan un sistema de transmisión automática.
+      </p>
+    </div>
+    <div class="col-md-5">
+      <img src="../images/scooter.jpg" class="d-block w-100 img-fluid" width="500" height="500" alt="Xmax 125">
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- /END THE FEATURETTES -->
+</div>
+
+
+{% endblock %}

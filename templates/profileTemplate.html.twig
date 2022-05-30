@@ -1,0 +1,93 @@
+{% extends "base1.html.twig" %}
+
+
+{% block logo %}
+  <a class="navbar-brand" href="/uPage/"><img src="../images/logo.png" class="bd-placeholder-img rounded-circle" width="50" height="50" alt="Mecánico"></a>
+{% endblock %}
+
+{% block home %}
+  <a class="nav-link px-2 text-secondary" aria-current="page" href="/uPage/">Home</a>
+{% endblock %}
+{% block motocicletas %}
+<a class="nav-link dropdown-toggle px-2 text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Motocicletas</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/uPage/#supersport/">Deportivas</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#nacked"/>Nacked</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#adventure/">Adventure</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#sportTouring/">Sport Touring</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#motocross/">Motocross</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#scrambler/">Scrambler</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#cruiser/">Cruiser</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#chooper/">Chooper</a></li>
+                    <li><a class="dropdown-item" href="/uPage/#scooter/">Scooter</a></li>
+                  </ul>
+{% endblock %}
+{% block sugerencias %}
+  <a class="nav-link px-2 text-white" href="/uSugerencias/">Sugerencias</a>
+{% endblock %}
+{% block blog %}
+  <a class="nav-link px-2 text-white" href="/uBlog/">Blog</a>
+{% endblock %}
+{% block buttons %}
+  <a class="links" href='/profile/'><button type="button" class="btn btn-outline-light me-2">{{nombre.getUser()}}</button></a>
+  <a class="links" href='/exit/'><button type="button" class="btn btn-warning">Cerrar Sesión</button></a>
+{% endblock %}
+{% block section %}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Perfil</h1>
+    <form action="/update/?idUser={{nombre.Id_user()}}" method="post">
+
+      <div class="input-group mb-3">
+        <input type="text" name='nombre' class="form-control text-center " id="name"
+          placeholder="Usuario: {{nombre.getUser()}}">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" name='mail' class="form-control text-center " id="mail"
+          placeholder="Correo Electrónico: {{nombre.getMail()}}">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" name='password' class="form-control text-center " id="password"
+          placeholder="Introduce tu nueva contraseña">
+        <div class="input-group-append">
+          <button class=" btn btn-lg btn-warning input-group-text " type="submit"><i
+              class="bi bi-arrow-clockwise"></i></button>
+        </div>
+      </div>
+
+    </form>
+    <a class="btn btn-outline-secondary mt-3" href="/comment/">Añadir Comentario</a>
+  </div> 
+</div>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center ">
+  <h1 class="display-4 font-weight-normal">Tus Comentarios</h1>
+</div>
+  {% for row in resultado %}
+    <div class="container text-center p-5 rounded border  sombra" >
+      <div class="col-8 offset-2" >
+        <div class="">
+          <div class="elementor-testimonial-content">{{row.getCommentary()}}</div>
+
+          <div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside p-5">
+
+
+              <div class="col-12 p-1 ">
+                <div class="elementor-testimonial-name name">User: {{nombre.getUser()}}</div>
+                <!--<div class="elementor-testimonial-job">Blogger3cero.com</div>-->
+              </div>
+          </div>
+        </div>
+        <div class="col-1  offset-11 ">
+                <a class="links" href='/delete/?id={{row.Id_datta()}}'><button class=" btn btn-lg btn-warning " type="submit"><i class="bi bi-trash-fill"></i></button></a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends "base1.html.twig" %}
+
+
+{% block logo %}
+  <a class="navbar-brand" href="../"><img src="../images/logo.png" class="bd-placeholder-img rounded-circle" width="50" height="50" alt="Mecánico"></a>
+{% endblock %}
+
+
+{% block home %}
+  <a class="nav-link px-2 text-secondary" aria-current="page" href="../">Home</a>
+{% endblock %}
+{% block motocicletas %}
+<a class="nav-link dropdown-toggle px-2 text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Motocicletas</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="../#supersport/">Deportivas</a></li>
+                    <li><a class="dropdown-item" href="../#nacked/">Nacked</a></li>
+                    <li><a class="dropdown-item" href="../#adventure/">Adventure</a></li>
+                    <li><a class="dropdown-item" href="../#sportTouring/">Sport Touring</a></li>
+                    <li><a class="dropdown-item" href="../#motocross/">Motocross</a></li>
+                    <li><a class="dropdown-item" href="../#scrambler/">Scrambler</a></li>
+                    <li><a class="dropdown-item" href="../#cruiser/">Cruiser</a></li>
+                    <li><a class="dropdown-item" href="../#chooper/">Chooper</a></li>
+                    <li><a class="dropdown-item" href="../#scooter/">Scooter</a></li>
+                  </ul>
+{% endblock %}
+{% block sugerencias %}
+  <a class="nav-link px-2 text-white" href="/sugerencias/">Sugerencias</a>
+{% endblock %}
+{% block blog %}
+  <a class="nav-link px-2 text-white" href="/blog/">Blog</a>
+{% endblock %}
+{% block buttons %}
+  <a class="links" href='/login'><button type="button" class="btn btn-outline-light me-2">Inicia Sesión</button></a>
+  <a class="links" href='/add'><button type="button" class="btn btn-warning">Únete al club</button></a>
+{% endblock %}
+{% block section %}
+
+        <div class="py-5">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h1 class="display-5 fw-bold">Elige bien tu moto</h1>
+                        <p class="fs-4">Tomate tu tiempo y haz la elección que más se adecue a tus necesidades. Ten en cuenta la comodidad para no sufrir a la hora de conducir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                </div>
+                                <h2 class="fs-4 fw-bold">Precaución al tomar las curvas</h2>
+                                <p class="mb-0">Debes tener en cuenta que necesitas práctica para coger destreza a la hora de tomar curvas. Recuerda que antes de llegar a la curva se tiene que disminuir la velocidad y entrar en ella totalmente abierto, cuando estés recorriendo la curva tienes que cerrarte hacía el vértice de la curva y por último al salir de la curva te vuelves a abrir y aceleras.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+                                <h2 class="fs-4 fw-bold">Siempre bien equipado</h2>
+                                <p class="mb-0">Una de las cosas más importantes es el equipo que se lleva a la hora de ir en moto, este tiene que ser de buena calidad para que en caso de caído sufrir el menor daño posible. Es primordial un buen casco, una buena chaqueta, unos guantes, botas y a poder ser un mono.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-award"></i></div>
+                                <h2 class="fs-4 fw-bold">Tú actitud al manillar cuenta</h2>
+                                <p class="mb-0">Un motorista no debe confiarse a la hora de ir en moto, hay que tener respeto y ser prudente. Se tienen que tener en cuenta los factores del entorno y tener una mentalidad activa, todos estos factores definirán nuestra capacidad de reacción.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-wrench"></i></div>
+                                <h2 class="fs-4 fw-bold">Conoce tu moto</h2>
+                                <p class="mb-0">Infórmate sobre tu moto, lee el manual de instrucciones y si tienes alguna duda consulta con un experto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-heart-pulse"></i></div>
+                                <h2 class="fs-4 fw-bold">Ojo con las distracciones</h2>
+                                <p class="mb-0">Al no estar acostumbrado a llevar una moto, es muy probable que los elementos del entorno faciliten tu distracción, por tanto, concéntrate adecuadamente en la conducción para evitar sustos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-x-octagon"></i></div>
+                                <h2 class="fs-4 fw-bold">Nunca circules con exceso de velocidad</h2>
+                                <p class="mb-0">Siempre se deben respetar los límites de velocidad de la vía por la que circular, recuerda que una moto de normal acelera más rápido que los coches convencionales y sin darte cuenta puedes estar sobrepasando el límite de la vía.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-distribute-horizontal"></i></div>
+                                <h2 class="fs-4 fw-bold">Trazar en la vida real</h2>
+                                <p class="mb-0">Cuando circules por carreteras abiertas hay que realizar la trazada un poco por la parte externa de la curva, esto hará que mejore tu visibilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+                                <h2 class="fs-4 fw-bold">Guarda la distancia de seguridad</h2>
+                                <p class="mb-0">Uno de los puntos más importantes a la hora de conducir una moto y cualquier vehículo es guardar la distancia de seguridad, sobre todo los motoristas novatos tienden a descuidar este punto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-warning bg-gradient text-black rounded-3 mb-4 mt-n4"><i class="bi bi-cone-striped"></i></div>
+                                <h2 class="fs-4 fw-bold">Ten cuidado con las superficies deslizantes</h2>
+                                <p class="mb-0">Se tiene que estar preparado a la hora de circular en los diferentes tipos de pavimentos que nos podamos encontrar en la carretera, muchos pavimentos no se encuentran en buen estado y es muy importante detectar los obstáculos que nos podamos encontrar.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{
+    "/":{
+        "controller": "IndexController",
+        "action": "index"
+    },
+    "/add":{
+        "controller": "AddUserController",
+        "action": "addUser"
+    },
+    "/login":{
+        "controller": "LoginUserController",
+        "action": "login"
+    },
+    "/uPage":{
+        "controller": "userIndexController",
+        "action": "userIndex"
+    },
+    "/exit":{
+        "controller": "LogoutController",
+        "action": "logout"
+    },
+    "/blog":{
+        "controller": "BlogController",
+        "action": "blog"
+    },
+    "/uBlog":{
+        "controller": "BlogUserController",
+        "action": "userblog"
+    },
+    "/comment":{
+        "controller": "AddCommentController",
+        "action": "comment"
+    },
+    "/sugerencias":{
+        "controller": "SugerenciasController",
+        "action": "sugerencias"
+    },
+    "/uSugerencias":{
+        "controller": "SugerenciasUserController",
+        "action": "userSugerencias"
+    },
+    "/profile":{
+        "controller": "ProfileController",
+        "action": "profile"
+    },
+    "/delete":{
+        "controller": "DeleteController",
+        "action": "delete"
+    },
+    "/update":{
+        "controller": "UpdateController",
+        "action": "update"
+    }
+}
